@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="login-section">
+    <form [(formGroup)]="data"  #loginForm="ngForm" id="login-form">
+      <ion-list inset>
+        Login usando tu Correo
+        <ion-item>
+          <ion-label>Correo</ion-label>
+          <ion-input formControlName="username" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </ion-list>
+    </form>
+    <button ion-button block (click)="login()" form="login-from" id="login-form">Login</button>
+  </div>
+</ion-content>
