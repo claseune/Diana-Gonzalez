@@ -3,6 +3,8 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import {Geolocation} from '@ionic-native/geolocation';
+import {GoogleMaps} from '@ionic-native/google-maps';
 
 import * as firebase from 'firebase';
 import { AngularFireModule } from 'angularfire2';
@@ -19,6 +21,7 @@ import {LoginPage} from '../pages/login/login';
 import {RegistroPage} from '../pages/registro/registro';
 import {EditarPage} from '../pages/editar/editar';
 import {FbPage} from '../pages/fb/fb';
+import {GpsPage} from '../pages/gps/gps';
 
 export const config = {
    apiKey: "AIzaSyAimxoz7NoYEQY5akjuxlQd9CFiW4rWQgo",
@@ -41,7 +44,8 @@ export const config = {
     EditarPage,
     RegistroPage,
     LoginPage,
-    GestosPage
+    GestosPage,
+    GpsPage
   ],
   imports: [
     BrowserModule,
@@ -60,11 +64,14 @@ export const config = {
     EditarPage,
     RegistroPage,
     LoginPage,
-    GestosPage
+    GestosPage,
+    GpsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

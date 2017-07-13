@@ -10,6 +10,7 @@ import {GestosPage} from '../pages/gestos/gestos';
 import {LoginPage} from '../pages/login/login';
 import {RegistroPage} from '../pages/registro/registro';
 import {EditarPage} from '../pages/editar/editar';
+import {GpsPage} from '../pages/gps/gps';
 
 
 @Component({

@@ -6,6 +6,7 @@ import {LisPage} from '../lis/lis';
 import {LoginPage} from '../login/login';
 import {RegistroPage} from '../registro/registro';
 import {FbPage} from '../fb/fb';
+import {GpsPage } from '../gps/gps';
 
 
 @Component({
@@ -34,6 +35,9 @@ export class HomePage {
   }
   goRegistro(){
     this.navCtrl.push(RegistroPage);
+  }
+  goGps(){
+    this.navCtrl.push(GpsPage);
   }
 
 
